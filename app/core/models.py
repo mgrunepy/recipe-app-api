@@ -48,4 +48,3 @@ class User(AbstractBaseUser, PermissionsMixin):
 
     # Set the field we want to use for authentication
     USERNAME_FIELD = "email"
-
