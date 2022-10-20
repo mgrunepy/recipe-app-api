@@ -183,7 +183,7 @@ class PrivateUserApiTest(TestCase):
         self.user.refresh_from_db()
 
         # Check name has been changed
-        self.assertEqual(res.user.name, payload['name'])
+        self.assertEqual(self.user.name, payload['name'])
 
         # Check password is now valid
         self.assertTrue(self.user.check_password(payload['password']))

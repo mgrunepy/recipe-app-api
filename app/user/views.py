@@ -32,7 +32,7 @@ class ManageUserView(generics.RetrieveUpdateAPIView):
     # Checking the authentication is valid
     authentication_classes = [authentication.TokenAuthentication]
     # Permissions, check what the user can do
-    permissions_classes = [permissions.IsAuthenticated]
+    permission_classes = [permissions.IsAuthenticated]
 
     def get_object(self):
         """Retreieve and return the authenticated user"""
